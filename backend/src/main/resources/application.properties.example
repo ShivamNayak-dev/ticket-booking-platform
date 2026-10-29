@@ -1,0 +1,39 @@
+# Copy this file to application.properties and fill in your own values.
+# application.properties is listed in .gitignore, this example file is safe to commit.
+spring.application.name=ticket-booking-service
+server.port=8080
+
+# ---------- PostgreSQL ----------
+spring.datasource.url=jdbc:postgresql://localhost:5432/ticket_booking
+spring.datasource.username=your_db_username
+spring.datasource.password=your_db_password
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.open-in-view=false
+spring.jpa.show-sql=false
+
+# ---------- Redis ----------
+spring.data.redis.host=localhost
+spring.data.redis.port=6379
+spring.data.redis.password=
+spring.data.redis.timeout=2000ms
+spring.data.redis.connect-timeout=2000ms
+
+# ---------- JWT / cookie ----------
+# secret must be at least 32 characters (HS256)
+app.jwt.secret=replace-with-a-long-random-string-of-at-least-32-characters
+app.jwt.expiration-ms=86400000
+app.cookie.name=access_token
+app.cookie.secure=false
+
+# ---------- CORS (frontend origin) ----------
+app.cors.allowed-origins=http://localhost:5173
+
+# ---------- Cache TTLs (minutes) ----------
+app.cache.event-ttl-minutes=10
+app.cache.event-list-ttl-minutes=2
+app.cache.booking-ttl-minutes=5
+
+# ---------- Demo data ----------
+app.seed.enabled=true
+
+logging.level.com.ticketbooking=INFO

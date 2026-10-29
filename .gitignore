@@ -1,0 +1,18 @@
+# Credentials - never commit the real config
+**/application.properties
+
+# Backend build output
+backend/target/
+*.class
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+.env
+.env.local
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
